@@ -39,15 +39,12 @@ export class Main{
     init(){
         //首先重置游戏为没有结束
         this.dataStore.isGameOver=false;
-        this.dataStore
-       .put('background',new BackGround());
+        this.dataStore.put('background',new BackGround());
        this.dataStore.put('land',new Land());
-        console.log(this.dataStore);
-       // this.dataStore
-      //  .put('background',new BackGround())
-      //.put('land',new Land());
+       this.dataStore.put('pencils',[])
 
+        //创建铅笔要在游戏逻辑运行之前
+        this.director.createPencil();
         this.director.run();
-        //this.dataStore.get('background').draw();
     }
 }
