@@ -11,6 +11,7 @@ export class Land extends Sprite{
             0, DataStore.getInstance().canvas.height - image.height,
             image.width,
             image.height
+            
         )
        
     }
